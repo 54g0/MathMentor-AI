@@ -57,9 +57,9 @@ pip install -r requirements.txt
 ```
 
 ### 1. Build / Initialize the Knowledge Base
-Run the setup script (adjust path if you want a custom storage location):
+Run the setup script (pass the vector_db folder path inside the file):
 ```bash
-python backend/KB_setup.py --out vector_db/vector_store
+python backend/KB_setup.py 
 ```
 
 ### 2. Start the MCP Tool Server
