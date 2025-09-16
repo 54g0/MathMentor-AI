@@ -16,24 +16,6 @@ MathMentor AI is a full‑stack learning assistant that:
 
 This is more than a plain LLM demo—it’s an iterative teaching loop with memory growth.
 
-## 🧩 Architecture Overview
-```
-┌──────────┐     ┌─────────────┐     ┌────────────────┐     ┌────────────────┐
-│ Streamlit│ --> │ FastAPI API │ --> │ MathTutorAgent │ --> │ MCP Tools       │
-│  Frontend│     │  (/ask)     │     │  (LLM + Prompt │     │  retrieve_data  │
-│ (app.py) │     │  (/feedback)│     │   + Tool Calls)│     │  web_search     │
-└─────┬────┘     └──────┬──────┘     └──────┬─────────┘     └────────┬───────┘
-	│                 │                   │                        │
-	│                 │                   ▼                        │
-	│                 │          Vector DB (FAISS) <─── stores Q/A ┘
-	│                 │
-	▼                 ▼
- User gives         Feedback loop
- question           refines answer
-```
-
-For more detail (system + sequence diagrams) see: [Architecture Documentation](docs/architecture.md)
-
 ## 🔑 Unique Qualities
 | Feature | Why It Matters |
 |---------|----------------|
@@ -138,23 +120,6 @@ Outputs an overall accuracy ratio (predicted option vs correct option). The benc
 | API_URL (frontend) | Backend base URL | http://localhost:8010 |
 
 Set via shell export or an `.env` file.
-
-## 🧪 Troubleshooting
-| Symptom | Likely Cause | Fix |
-|---------|--------------|-----|
-| Tools never called | MCP server not running | Start `backend/mcp_server.py` first |
-| 404 on /feedback | Old API server instance | Restart after pulling changes |
-| Model rejects request | Invalid model name | Update `MODEL_NAME` env |
-| Vector store not updating | Missing directory or load error | Run KB setup & check paths |
-| Slow first request | Embedding model cold start | Ignore; subsequent calls faster |
-
-## 🧭 Possible Next Improvements
-- Add LaTeX rendering for math expressions in the UI.
-- Implement duplicate detection before storing Q/A.
-- Add user authentication + per-user memory partitioning.
-- Introduce evaluation agent for answer verification (symbolic equivalence via SymPy).
-- Stream intermediate tool call traces to the UI.
-- Batch ingestion & background index compaction.
 
 ## 🤝 Contributing
 Fork, branch, and open a PR. For larger ideas, open an issue first to discuss approach (especially for new tool interfaces or memory schemas).
