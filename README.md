@@ -5,6 +5,10 @@ An agentic, retrieval‑augmented Math Tutor with a feedback refinement loop and
 
 </div>
 
+<p align="center">
+	<img src="assets/Screenshot from 2025-09-16 22-33-39.png" alt="MathMentor Screenshot" width="780" />
+</p>
+
 ## 🌟 What Is This?
 MathMentor AI is a full‑stack learning assistant that:
 - Accepts only math‑related queries (non‑math inputs are politely declined up front).
