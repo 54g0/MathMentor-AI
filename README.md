@@ -70,7 +70,7 @@ This provides the `retrieve_data` (vector similarity) and `web_search` tool endp
 
 ### 3. Start the API Server
 ```bash
-uvicorn backend.api_server:app --host 0.0.0.0 --port 8010
+python backend/api_server.py
 ```
 
 ### 4. Launch the Frontend UI
