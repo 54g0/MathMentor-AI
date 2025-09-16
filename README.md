@@ -34,7 +34,7 @@ This is more than a plain LLM demo—it’s an iterative teaching loop with memo
 | `backend/api_server.py` | FastAPI endpoints: `/health`, `/ask`, `/feedback` (and auto Q/A vector DB ingestion). |
 | `backend/KB_setup.py` | (Run once) Builds or initializes the vector database. |
 | `backend/benchmark.py` | Simple accuracy benchmarking on JEE-style MCQs. |
-| `backend/vdb_updater.py` or `vector_db/updater.py` | Helper that appends new Q/A pairs to FAISS index. |
+| `backend/vdb_updater.py` | Helper that appends new Q/A pairs to FAISS index. |
 | `frontend/app.py` | Streamlit chat UI with feedback form and improved answer display. |
 
 ## 🛠️ Prerequisites
