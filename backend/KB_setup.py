@@ -30,5 +30,6 @@ class KB_setup:
         self.vector_store.save_local(vector_store_path)
         return "Vector store created and saved to disk."
 
-kb_setup = KB_setup(vector_db_dir="/home/egg/Documents/agentic_rag_MT/vector_db")
+kb_setup = KB_setup(vector_db_dir="provide the path to your vector db directory")
+kb_setup.create_vector_store()
 Vector_store = kb_setup.load_data()
