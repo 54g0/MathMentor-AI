@@ -127,11 +127,3 @@ Set via shell export or an `.env` file.
 
 ## 🤝 Contributing
 Fork, branch, and open a PR. For larger ideas, open an issue first to discuss approach (especially for new tool interfaces or memory schemas).
-
-## 📄 License
-Educational / internal prototype. Add an explicit license file if redistributing.
-
----
-Made to explore how iterative, tool-grounded tutoring + user feedback can build an evolving math knowledge base.
-
-Happy learning! 🧠
